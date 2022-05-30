@@ -1,0 +1,107 @@
+version: "2.0"
+stories:
+- story: greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+- story: thank_you
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+- story: bot_challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+- story: faq
+  steps:
+  - intent: ask
+  - action: utter_ask
+- story: info_happy_path
+  steps:
+  - intent: affirm
+  - action: info_form
+  - active_loop: info_form
+  - active_loop: null
+  - action: utter_slot_values
+- story: info_sad_path
+  steps:
+  - intent: deny
+  - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask
+  - action: utter_ask
+  - intent: affirm
+  - action: info_form
+  - action: utter_ask_name
+  - intent: inform
+    entities:
+    - name: John Doe
+  - slot_was_set:
+    - name: John Doe
+  - action: utter_ask_email
+  - intent: inform
+    entities:
+    - email: john@gmail.com
+  - slot_was_set:
+    - email: john@gmail.com
+  - action: utter_ask_company
+  - intent: inform
+    entities:
+    - company: Google
+  - slot_was_set:
+    - company: Google
+  - action: utter_ask_job_title
+  - intent: inform
+    entities:
+    - job_title: CEO
+  - slot_was_set:
+    - job_title: CEO
+  - action: utter_slot_values
+  - intent: thank_you
+  - action: utter_thank_you
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID b9f3735ebd45420a9e11af50d80a3ccc
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask
+  - action: utter_ask
+  - intent: affirm
+  - action: info_form
+  - action: utter_ask_name
+  - intent: inform
+    entities:
+    - name: Rahul
+  - slot_was_set:
+    - name: Rahul
+  - action: utter_ask_email
+  - intent: inform
+    entities:
+    - email: rahul12singh@gmail.com
+  - slot_was_set:
+    - email: rahul12singh@gmail.com
+  - action: utter_ask_company
+  - intent: inform
+    entities:
+    - company: Netflix
+  - slot_was_set:
+    - company: Netflix
+  - action: utter_ask_job_title
+  - intent: inform
+    entities:
+    - job_title: Software Engineer
+  - slot_was_set:
+    - job_title: Software Engineer
+  - action: utter_slot_values
+  - intent: thank_you
+  - action: utter_thank_you
+  - intent: goodbye
+  - action: utter_goodbye

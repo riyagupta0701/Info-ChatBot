@@ -1,0 +1,97 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- thank_you:
+    use_entities: true
+- affirm:
+    use_entities: true
+- inform:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- greet:
+    use_entities: true
+- ask:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- deny:
+    use_entities: true
+entities:
+- company
+- email
+- job_title
+- name
+slots:
+  name:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  email:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  company:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  job_title:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_thank_you:
+  - text: Thank you for your time
+  utter_ask:
+  - text: |
+      My function is to collect your information. Will you answer my questions?
+  - text: |
+      My purpose is to collect your information. Will you answer my questions?
+  utter_ask_name:
+  - text: What is your name?
+  utter_ask_email:
+  - text: What is your email address?
+  utter_ask_company:
+  - text: Which company do your work for?
+  utter_ask_job_title:
+  - text: What is your job title?
+  utter_slot_values:
+  - text: |-
+      You've submitted the following answers: 
+       - Name:  {name}
+       - Email: {email}
+       - Company: {company}
+       - Job Title: {job_title}
+  utter_ask_continue:
+  - text: Sorry, I don't quite understand. Do you want to continue?
+actions:
+- info_form
+- utter_ask
+- utter_ask_company
+- utter_ask_email
+- utter_ask_job_title
+- utter_ask_name
+- utter_goodbye
+- utter_greet
+- utter_slot_values
+- utter_thank_you
+forms:
+  info_form:
+    required_slots: {}
+e2e_actions: []

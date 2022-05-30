@@ -1,0 +1,18 @@
+# version: "2.0"
+
+# rules:
+
+# - rule: activate info form
+#   steps:
+#   - intent: affirm
+#   - action: info_form
+#   - active_loop: info_form
+
+# - rule: submit form
+#   condition:
+#   - active_loop: info_form
+#   steps:
+#   - action: info_form
+#   - active_loop: info_form
+#   - active_loop: null
+#   - action: utter_slot_values

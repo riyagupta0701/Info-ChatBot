@@ -1,0 +1,109 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - yo
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: thank_you
+  examples: |
+    - thank you
+    - thanks
+    - thank you so much
+    - cheers
+    - thanks for that
+    - thanks bot
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: ask
+  examples: |
+    - What is your purpose?
+    - What is your function?
+    - what is your function
+- intent: inform
+  examples: |
+    - [John Doe](name)
+    - Jane Doe
+    - My name is [Rahul Singh](name)
+    - [john@gmail.com](email)
+    - awesome123@gmail.com
+    - My email is [rahul_singh43@gmail.com](email)
+    - [Google](company)
+    - GenieTalk.ai
+    - I work at [Netflix](company)
+    - [Software Engineer](job_title)
+    - HR Manager
+    - [Marketing Head](job_title)
+    - CEO
+    - I am a [Data Scientist](job_title)
+    - [John Doe](name)
+    - [john@gmail.com](email)
+    - [Google](company)
+    - [CEO](job_title)
+- intent: out_of_scope
+  examples: |
+    - wait stop
+    - that's not what I want to do
+    - this is no help at all
+    - I don't want to tell you that
+    - I already told you that
+    - I don't want to answer your questions
+    - None of your business
+    - Stop asking
+    - That's not right
+    - Never mind
+    - I don't want to do this
+    - I changed my mind
+    - I want to do something else
+- intent: affirm
+  examples: |
+    - sure
+    - ok
+    - yes
+    - why not
+    - ok great
+    - yes I did
+    - yeah, great
+    - pretty good
+    - fine
+    - You bet
+    - I sure did
+    - more or less
+- intent: deny
+  examples: |
+    - none
+    - absolutely not
+    - no thanks
+    - didn't do any
+    - no I didn't
+    - could have been better
+    - not great
+    - nope
