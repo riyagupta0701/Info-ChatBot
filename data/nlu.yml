@@ -48,6 +48,7 @@ nlu:
     - What is your purpose?
     - What is your function?
     - what is your function
+    - riya
 - intent: inform
   examples: |
     - [John Doe](name)
@@ -64,10 +65,10 @@ nlu:
     - [Marketing Head](job_title)
     - CEO
     - I am a [Data Scientist](job_title)
-    - [John Doe](name)
-    - [john@gmail.com](email)
-    - [Google](company)
     - [CEO](job_title)
+    - [riya@gmail.com](email)
+    - [Data Scientist](job_title)
+    - Riya
 - intent: out_of_scope
   examples: |
     - wait stop
