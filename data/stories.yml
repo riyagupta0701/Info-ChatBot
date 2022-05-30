@@ -20,13 +20,6 @@ stories:
   steps:
   - intent: ask
   - action: utter_ask
-- story: info_happy_path
-  steps:
-  - intent: affirm
-  - action: info_form
-  - active_loop: info_form
-  - active_loop: null
-  - action: utter_slot_values
 - story: info_sad_path
   steps:
   - intent: deny

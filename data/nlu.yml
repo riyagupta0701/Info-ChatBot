@@ -48,7 +48,6 @@ nlu:
     - What is your purpose?
     - What is your function?
     - what is your function
-    - riya
 - intent: inform
   examples: |
     - [John Doe](name)
@@ -90,6 +89,7 @@ nlu:
     - ok
     - yes
     - why not
+    - maybe
     - ok great
     - yes I did
     - yeah, great

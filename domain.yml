@@ -51,7 +51,7 @@ slots:
     influence_conversation: false
 responses:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hey!
   utter_goodbye:
   - text: Bye
   utter_iamabot:
@@ -60,9 +60,9 @@ responses:
   - text: Thank you for your time
   utter_ask:
   - text: |
-      My function is to collect your information. Will you answer my questions?
+      My function is to collect some information for a survey. Will you answer my questions?
   - text: |
-      My purpose is to collect your information. Will you answer my questions?
+      My purpose is to collect some information for a survey. Will you answer my questions?
   utter_ask_name:
   - text: What is your name?
   utter_ask_email:
